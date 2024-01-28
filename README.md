@@ -15,6 +15,90 @@
 ### 3. 작업 전에 항상 pull 하여 최신상태에서 작업
 <br>
 
+### 4. 파일명 및 파일 구조 규칙
+```
+예시
+/ (프로젝트 루트)
+├── index.html
+├── css/
+│   ├── style.css
+│   └── components/
+│       ├── button.css
+│       ├── card.css
+│       └── navbar.css
+├── js/
+│   ├── script.js
+│   └── components/
+│       ├── modal.js
+│       └── tab.js
+├── components/
+│   ├── button.html
+│   ├── card.html
+│   └── navbar.html
+└── images/
+    ├── logo.png
+    └── background.jpg
+
+//이미지파일 이름명에 대한 규칙은 상의 후 결정..
+
+```
+<br>
+
+### ※ components 폴더란❓ ###
+저희가 자주 사용하게 될 버튼이나, 카드, Navigation Bar 등 재사용하기 위한 것들을 따로 모아두어, 필요할 때마다 꺼내씁니다. → UI들의 통일성 확보 및 시간 절약
+
+📍 재사용하는 방법 <br>
+그냥 복붙하면 됩니다. <br><br>
+`button.html 예시`
+```
+<!-- 기본 버튼 -->
+<button class="custom-button">Click Me</button>
+
+<!-- 대형 버튼 -->
+<button class="custom-button large">Large Button</button>
+
+<!-- 색상이 적용된 버튼 -->
+<button class="custom-button red">Red Button</button>
+```
+
+`또한 css/components/button.css 파일에 들어갈 예시는 다음과 같습니다.`
+```
+/* 기본 버튼 스타일 */
+.custom-button {
+    padding: 10px 15px;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    background-color: blue;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.custom-button:hover {
+    background-color: darkblue;
+    color: #fff;
+}
+
+/* 대형 버튼 스타일 */
+.custom-button.large {
+    padding: 15px 20px;
+    font-size: 18px;
+}
+
+/* 색상이 적용된 버튼 스타일 (레드) */
+.custom-button.red {
+    background-color: red;
+}
+
+.custom-button.red:hover {
+    background-color: darkred;
+}
+
+```
+
+이런식으로 button.html 작성해둔 뒤, 나중에 페이지 작업할 때 필요한 버튼들을 복붙하면 됩니다.
+
 ----
 
 ## ※ Develop Branch에서 분기하여 기능 브랜치 작성 방법
@@ -36,5 +120,3 @@ git add
 git commit -m "KBG_로그인폼에서의 ID중복검사 로직추가"
 git push origin feature/login-form
 ```
-
-test
