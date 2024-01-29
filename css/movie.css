@@ -1,0 +1,89 @@
+/* ./css/movie.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+#slider {
+    position: relative;
+    width: 80%; /* 수정: 전체 화면 너비의 80%로 설정 */
+    margin: 20px auto; /* 가운데 정렬을 위해 margin 추가 */
+    overflow: hidden;
+}
+
+.slider__item {
+    position: relative; /* 추가: 포지션을 상대적으로 변경 */
+}
+
+.slider__item::before,
+.slider__item::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+
+}
+
+.slider__item::before {
+    left: -20px; /* 왼쪽에 추가된 요소로 인해 음수 값으로 설정 */
+}
+
+.slider__item::after {
+    right: -20px; /* 오른쪽에 추가된 요소로 인해 음수 값으로 설정 */
+}
+
+.slider__item img {
+    width: 100%;
+    height: auto;
+}
+
+.top5 {
+    text-align: left; /* 수정: 가운데 정렬을 위해 text-align 수정 */
+    margin-top: 20px;
+    padding: 0 20px; /* 좌우 패딩을 추가하여 양 옆 여백을 일치시킴 */
+    box-sizing: border-box; /* 패딩 포함된 전체 크기로 박스 모델을 조절 */
+    font-size: 0.3em; /* 텍스트 크기를 조절 (1.2em은 현재 크기의 1.2배) */
+}
+
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* 수정: 6개의 열로 변경 */
+    gap: 5px; /* 간격을 좁게 조절 */
+    max-width: 800px;
+    margin: 20px auto; /* 가운데 정렬을 위해 margin 추가 */
+}
+
+.movie-item {
+    height: 150px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.movie-item img {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+}
+
+@media (max-width: 800px) {
+    .movie-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* 기존 코드... */
+
+.genre-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 수정: 가로로 4개씩 나열 */
+    gap: 5px;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+/* 기존 코드... */
+
