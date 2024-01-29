@@ -25,7 +25,9 @@
     display: flex;
     margin: 0;
   }
-  
+  .next_btn:hover{
+    background-color: #666;
+  }
   .next_btn{
     position: fixed;
     background-color: whitesmoke;

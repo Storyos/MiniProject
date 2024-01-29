@@ -30,6 +30,7 @@ movie_list.appendChild(movie_item1);
 
 const next_btn = document.querySelector('.next_btn');
 
+//영화선택했을때 발생하는 이벤트
 function getMovie(event) {
     document.getElementById('reserv-movie').innerHTML=
     `
@@ -37,6 +38,9 @@ function getMovie(event) {
     `;
     next_btn.style.display = 'block';   
 }
+
+//다음으로 버튼을 클릭했을 때, 발생하는 이벤트
+
 
 const bar_menu = document.querySelectorAll(".navbar_menu");
 for(b of bar_menu){
