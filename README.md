@@ -20,6 +20,7 @@
 예시
 / (프로젝트 루트)
 ├── index.html
+├── 기타 사용될 page
 ├── css/
 │   ├── style.css
 │   └── components/
