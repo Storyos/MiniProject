@@ -14,16 +14,16 @@ for(let i = 0; i <8; i++){
     movie_item1.innerHTML=`          
     <div class="movie-poster">
     <!-- 여기에 영화-포스터가 들어감 -->
+    <img src="../image/movie-poster/movie_poster${i}.jpg" alt="${movie_title[i]}">
+
 </div>
 <div class="movie-info">
     <h3 class="movie-title">${movie_title[i]}</h3>
     <p class="movie-time">${movie_time[i]}</p>
     <p class="movie-date">${movie_date[i]}</p>
     <p class="movie-detail"><a href="#상세보기">상세정보</a></p>
-    <button>영화선택</button>
+    영화선택하기 <input type="radio" name="radio_answer" value="${movie_title[i]}" />
 </div>
 </div>`;
-console.log(movie_list);
 movie_list.appendChild(movie_item1);
-console.log(movie_item1.innerHTML);
 }

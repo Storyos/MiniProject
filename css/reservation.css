@@ -1,7 +1,7 @@
 /* Nav Bar 관련 CSS */
 .navbar {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     background-color: darkgray;
     padding: 8px;
@@ -34,9 +34,12 @@
   
   .movie-item {
     display: flex;
-    margin-bottom: 0px;
+    margin-bottom: 3px;
   }
-  
+  img{
+    width: 100px;
+    height: 150px;
+  }
   /* 사진 넣는 공간 */
   .movie-poster {
     width: 100px;
