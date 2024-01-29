@@ -5,12 +5,11 @@ const date_menu = document.querySelector("#reserve-datentime")
 const movie_list = document.querySelector(".movie-list")
 const movie_title = ['웡카','시민덕희','소풍','도그데이즈','외계+인 2부','위시','서울의 봄','데드맨'];
 const movie_time = ['116분','113분','113분','120분','122분','95분','141분','108분'];
-const movie_date = ['2024.01.31]','2024.01.24','2024.02.07','2024.02.07','2024.01.10','2024.01.03','2023.11.22','2024.02.07'];
+const movie_date = ['2024.01.31','2024.01.24','2024.02.07','2024.02.07','2024.01.10','2024.01.03','2023.11.22','2024.02.07'];
 
 for(let i = 0; i <8; i++){
     const movie_item1 = document.createElement("div");
     movie_item1.className='movie-item';
-    console.log(movie_item1.className);
     movie_item1.innerHTML=`          
     <div class="movie-poster">
     <!-- 여기에 영화-포스터가 들어감 -->
@@ -22,8 +21,27 @@ for(let i = 0; i <8; i++){
     <p class="movie-time">${movie_time[i]}</p>
     <p class="movie-date">${movie_date[i]}</p>
     <p class="movie-detail"><a href="#상세보기">상세정보</a></p>
-    영화선택하기 <input type="radio" name="radio_answer" value="${movie_title[i]}" />
+    영화선택하기 <input type="radio" name="radio_answer" 
+    onclick='getMovie(event)' value="${movie_title[i]}" />
 </div>
 </div>`;
 movie_list.appendChild(movie_item1);
 }
+
+const next_btn = document.querySelector('.next_btn');
+
+function getMovie(event) {
+    document.getElementById('reserv-movie').innerHTML=
+    `
+    ${event.target.value}
+    `;
+    next_btn.style.display = 'block';   
+}
+
+const bar_menu = document.querySelectorAll(".navbar_menu");
+for(b of bar_menu){
+    b.addEventListener("click", (e) => {
+        console.log(b+"is Clicked");
+    })
+}
+
