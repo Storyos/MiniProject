@@ -1,3 +1,4 @@
+/* Nav Bar 관련 CSS */
 .navbar {
     display: flex;
     justify-content: center;
@@ -10,7 +11,8 @@
     font-family: 'Arial', sans-serif;
   }
   a {
-    text-decoration: none
+    text-decoration: none;
+    color: black;
   }
 
   .navbar_menu {
@@ -24,6 +26,7 @@
     padding: 10px;
   }
 
+/* Movie List 관련 css */
   .movie-list {
     display: flex;
     flex-direction: column;
