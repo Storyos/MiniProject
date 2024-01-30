@@ -4,6 +4,7 @@
     justify-content: space-around;
     align-items: center;
     background-color: #333333;
+    height: 80px;
     padding: 8px;
     color: white;
 }

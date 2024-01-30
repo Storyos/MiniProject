@@ -6,6 +6,7 @@
     align-items: center;
     background-color: #333333;
     padding: 8px;
+    height: 80px;
     color: white;
 }
 body {
@@ -34,8 +35,8 @@ a {
 .next_btn {
     position: fixed;
     background-color: rgb(224, 215, 215,0.95);
-    transform: translateY(150px);
     border-radius: 24px;
+    bottom: 50%;
     right: 60px;
     width: 150px;
     height: 60px;
@@ -45,8 +46,16 @@ a {
 
 .navbar_menu div {
     padding: 10px;
+    margin-top: 10px;
 }
-
+.banner{
+    text-align: center;
+}
+.banner>img{
+    width: 350px;
+    height: 180px;
+    margin-top: 10px;
+}
 
 /* 영화관 메뉴 */
 
@@ -69,7 +78,7 @@ body {
 
 .side-bar {
     /* 스크롤을 따라오도록 지정 */
-    background-color: linen;
+    background-color: white;
     /* width: var(--side-bar-width); */
     width: 40%;
     min-height: 100%;
@@ -96,16 +105,17 @@ body {
 
 /* 모든 메뉴가 마우스 인식 시 반응 */
 .side-bar ul>li:hover>a {
-    background-color: #eae2ac;
-    border-bottom: 1px solid #eae2ac;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #f5f5f5;
     
 }
 
 /* 지역 hover시 2차 지역 display: block */
 .side-bar>ul>li:hover>ul {
+    text-decoration:underline;
     display: block;
     position: absolute;
-    background-color: #cbcd80;
+    background-color: #f5f5f5;
     top: 0;
     left: 100%;
     width: 200%;
