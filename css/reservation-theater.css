@@ -1,14 +1,13 @@
 /* Nav Bar 관련 CSS */
 
-
 .navbar {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: darkgray;
+    background-color: #333333;
     padding: 8px;
+    color: white;
 }
-
 body {
     width: 100%;
     margin: 0;

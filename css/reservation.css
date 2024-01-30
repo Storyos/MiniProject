@@ -1,13 +1,23 @@
 /* Nav Bar 관련 CSS */
-
-
 .navbar {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: darkgray;
-    padding: 8px;
-  }
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #333333;
+  padding: 8px;
+  color: white;
+}
+
+.navbar_menu {
+  width: fit-content;
+  list-style: none;
+  display: flex;
+  margin: 0;
+}
+.navbar_menu div {
+  padding: 10px;
+}
+
   body { 
     width: 100%;
     margin: 0;
@@ -17,17 +27,9 @@
   a {
     text-decoration: none;
     color: black;
-  }
+}
 
-  .navbar_menu {
-    width: fit-content;
-    list-style:none;
-    display: flex;
-    margin: 0;
-  }
-  .next_btn:hover{
-    background-color: #666;
-  }
+
   .next_btn{
     position: fixed;
     background-color: whitesmoke;
