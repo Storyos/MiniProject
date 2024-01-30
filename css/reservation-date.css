@@ -1,0 +1,172 @@
+/* Nav Bar 관련 css */
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #333333;
+    height: 80px;
+    padding: 8px;
+    color: white;
+}
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #333333;
+    padding: 8px;
+    color: white;
+}
+
+.navbar_menu {
+    width: fit-content;
+    list-style: none;
+    display: flex;
+    margin: 0;
+}
+.navbar_menu div {
+    padding: 10px;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
+#left_move{
+    float:left;
+}
+#right_move{
+    float: right;
+}
+
+li {
+    list-style: none;
+}
+
+.calendar_list {
+    width: 300px;
+}
+
+.date_list {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    overflow: hidden;
+    display: flex;
+    width: 414px;
+    background-color: #f8f8f8;
+    background-clip:border-box;
+}
+
+.date {
+    flex: none;
+    min-width: 50px;
+    margin: 0 5px;
+    text-align: center;
+    padding-left: 0;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border: 1px solid white;
+    border-radius: 4px;
+    background-color: white;
+}
+
+/*클릭되었을 때 검은색 원으로 표시  */
+.date.clicked{
+    border: solid 1px black;
+    border-radius:50%;
+    padding-top : 10px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    background-color: black;
+    color: white;
+}
+.date:hover,.time_card:hover{
+    cursor: pointer;
+}
+body{
+    /* body 전체 부분은 IPHONE XR에 맞추기 위해 max width : 414px로 준다.(xr 크기) */
+    max-width: 414px;
+    min-height: 896px;
+    /* 꽉찬 화면 지원을 위해 Margin : 0 */
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    background-color: white;
+}
+
+
+
+/* 시작시간은 초록색 굵은 글씨체로 */
+.start_time{
+    color: green;
+    font-weight: bold;
+}
+
+
+.time_card{
+    float: left;
+    display: flex;
+    border: 1px solid grey;
+    width: 110px;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    padding: 3px;
+    padding-top: 0;
+    padding-bottom: 0;;
+    margin: 10px;
+}
+.time_card .seats{
+    font-size: 11px;
+}
+.time_card t{
+    float: right;
+    margin-right: 5px;
+}
+#seat_announce>img {
+    float: left;
+}
+#seat_announce>p{
+    margin-top: 0;
+    margin-left: 150px;
+
+}
+#seat_announce.popup{
+    display: block;
+}
+#seat_announce{
+    display: none;
+    width: 373px;
+    height: 500px;
+    position: absolute;
+    bottom: 0%;
+    float: left;
+    background-color: white;
+    border: solid 1px black;
+    border-radius: 5px;
+    padding: 20px;
+    padding-top: 40px;
+    display: none;
+}
+#seat_announce .buttons{
+    text-align: center;
+}
+#seat_announce #close:hover,#seat_select:hover{
+    cursor: pointer;
+}
+#seat_announce #close{
+    width: 130px;
+    height: 60px;
+    background-color: #414141;
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+#seat_announce #seat_select{
+    width: 130px;
+    height: 60px;
+    background-color: red;
+    border: none;
+    border-radius: 5px;
+    color: white;
+}

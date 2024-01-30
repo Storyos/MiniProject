@@ -1,0 +1,92 @@
+/* Nav Bar 관련 CSS */
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #333333;
+  padding: 8px;
+  color: white;
+  height: 80px;
+}
+
+.navbar_menu {
+  width: fit-content;
+  list-style: none;
+  display: flex;
+  margin: 0;
+}
+.navbar_menu div {
+  padding: 10px;
+}
+
+  body { 
+    width: 100%;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: whitesmoke;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+}
+
+
+  .next_btn{
+    position: fixed;
+    background-color: whitesmoke;
+    transform: translateY(540px);
+    border-radius: 24px;
+    right: 10px;
+    width: 150px;
+    height: 60px;
+    z-index: 10;
+    display: none;
+  }
+
+  .navbar_menu div {
+    padding: 10px;
+  }
+
+
+/* Movie List 관련 css */
+  .movie-list {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .movie-item {
+    display: flex;
+    margin-bottom: 3px;
+  }
+  img{
+    width: 100px;
+    height: 150px;;
+  }
+  /* 사진 넣는 공간 */
+  .movie-poster {
+    width: 100px;
+    height: 150px; 
+    background-color: #ccc; 
+    margin-right: 20px;
+  }
+  
+  .movie-info {
+    margin-top: 5px;
+    flex-grow: 1;
+    width: auto;
+  }
+  
+  .movie-title {
+    font-size: 1.2em;
+    margin: 0;
+  }
+  
+  .movie-time, .movie-date {
+    font-size: 0.9em;
+    color: #666;
+    margin: 5px 0;
+  }
+  .movie-detail{
+    font-size: 0.7em;
+    margin: 5px 0;
+  }
