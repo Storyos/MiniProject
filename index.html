@@ -7,53 +7,125 @@
   <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-  <header>
     <div id="header_container">
-      <div class="header_box">
-        <div class="header_list_box" id="header_grid01">
-          <ul>
-            <li><a href="#"><i class="fab fa-facebook"></i>페이스북</a></li>
-            <li><a href="#"><i class="fab fa-youtube"></i>유튜브</a></li>
-            <li><a href="#"><i class="fab fa-instagram"></i>인스타그램</a></li>
-          </ul>
+      <div id="header_top">
+        <div class="header_list_box" id="header_top_grid01">
+          <a href="#"><i class="fab fa-facebook"></i>&nbsp;페이스북</a>
+          <a href="#"><i class="fab fa-youtube"></i>&nbsp;유튜브</a>
+          <a href="#"><i class="fab fa-instagram"></i>&nbsp;인스타그램</a>
         </div>
-        <div class="header_logo_box" id="header_grid02"><i class="fas fa-mug-hot fa-2xl"></i><h1>Latte Cinema</h1></div>
-        <div class="header_list_box" id="header_grid03">
-          <ul>
-            <li><a href="#">맴버쉽</a></li>
-            <li><a href="#">고객센터</a></li>
-            <li><a href="#">단체관람/대관문의</a></li>
-            <li><a href="#">로그인</a></li>
-          </ul>
+        <div class="header_logo_box" id="header_top_grid02">
+          <i class="fas fa-mug-hot fa-2xl"></i>
+          <h2>&nbsp;Latte Cinema</h2>
+        </div>
+        <div class="header_list_box" id="header_top_grid03">
+          <a href="#">맴버쉽</a>
+          <a href="#">고객센터</a>
+          <a href="#">단체관람/대관문의</a>
+          <a href="#">로그인</a>
         </div>
       </div>
-      <div class="header_box">
-        <div class="header_list_box" id="header_grid02">
-          <ul>
-            <li><a href="#">예매</a></li>
-            <li><a href="#">영화</a></li>
-            <li><a href="#">영화관</a></li>
-            <li><a href="#">이벤트</a></li>
-            <li><a href="#">스토어</a></li>
-          </ul>
-        </div>      
-        <div class="header_list_box" id="header_grid03">
-          <ul>
-            <li><a href="#">회원가입</a></li>
-            <li><a href="#">바로예매</a></li>
-            <li><i class="fas fa-bars"></i></li>
-          </ul>
+      <div id="header_bot_back">
+        <div id="header_bot">
+          <div class="header_list_box" id="header_bot_grid02">
+            <div class="header_menu_btn header_menu_bar">
+              <a href="reservation.html">예매</a>
+            </div>
+            <div class="header_menu_btn header_menu_bar">
+              <a href="movie.html">영화</a>
+            </div>
+            <div class="header_menu_btn header_menu_bar">
+              <a href="theater.html">영화관</a>
+            </div>
+            <div class="header_menu_btn header_menu_bar">
+              <a href="event.html">이벤트</a>
+            </div>
+            <div class="header_menu_btn">
+              <a href="store.html">스토어</a>
+            </div>
+          </div>        
+          <div class="header_list_box" id="header_bot_grid03">
+            <a href="#"><i class="fas fa-user"></i>&nbsp;회원가입</a>
+            <a href="#"><i class="fas fa-note-sticky"></i>&nbsp;바로예매</a>
+            <i class="fas fa-bars fa-xl"></i>
+          </div>
         </div>
+      </div>
+      <div id="header_bot_drop">
+        <div id="drop_reservation" class="dropBox" style="display: none;">
+          <a href="">예매하기</a>
+          <a href="">상영시간표</a>
+          <a href="">할인안내</a>
+        </div>
+        <div id="drop_movie" class="dropBox" style="display: none;">
+          <div><a href="">홈</a></div>
+          <a href="">현재상영작</a>
+          <a href="">상영예정작</a>
+          <a href="">아르떼</a>
+          <a href="">국립극장</a>
+        </div>
+        <div id="drop_theater" class="dropBox" style="display: none;">
+          <a href="">스페셜관</a>
+          <a href="">서울</a>
+          <a href="">경기/인천</a>
+          <a href="">충청/대전</a>
+          <a href="">전라/광주</a>
+          <a href="">경북/대구</a>
+          <a href="">경남/부산/울살</a>
+          <a href="">강원</a>
+          <a href="">제주</a>
+        </div>
+        <div id="drop_event" class="dropBox" style="display: none;">
+          <a href="">홈</a>
+          <a href="">영화</a>
+          <a href="">시사회/무대인사</a>
+          <a href="">HOT</a>
+          <a href="">제휴할인</a>
+          <a href="">우리동네영화관</a>
+        </div>
+        <div id="drop_store" class="dropBox" style="display: none;">
+          <a href="">베스트</a>
+          <a href="">관람권</a>
+          <a href="">스낵음료</a>
+          <a href="">포토카드</a>
+        </div>
+      </div>
+      <div id="index_modal" style="display: none;">
+        모달모달
       </div>
     </div>
-  </header>
   <body>
     <div id="content">
-      <div>
-        이미지
+      <div id="content_slide">
+        <ul class="content_slides_box">
+          <li><img src="image/index/index_slide_img01.jpg" alt=""></li>
+          <li><img src="image/index/index_slide_img02.jpg" alt=""></li>
+          <li><img src="image/index/index_slide_img03.jpg" alt=""></li>
+        </ul>  
+        <p class="controller">
+          <span class="prev"><i class="fas fa-chevron-left"></i></span>  
+          <span class="next"><i class="fas fa-chevron-right"></i></span>
+        </p class="controller">
       </div>
-      <div>
-        카드
+      <div id="content_card_slide">
+        <div id="content_cardBox">
+          <div class="content_card" style="background-image: url(image/index/index_card01.jpg);">
+            <div class="content_card_img">
+              <div class="card_inner_text">
+                <a href="" class="">예매하기</a>
+                <a href="" class="">상세정보</a>
+              </div>
+            </div>
+            <div>
+              <span>연령</span>
+              <span>제목</span>
+            </div>
+            <div>
+              <span>예매율</span>
+              <span>평점</span>
+            </div>
+          </div>
+        </div>
       </div>
       <div id="index_special">
         <div class="index_title gray_underline">
@@ -78,12 +150,24 @@
           <p>더보기></p>
         </div>
         <div id="index_event_cardBox">
-          <div class="index_img_card" id="index_event01"><a href=""><img src="image/index/index_event01.jpg" alt="#"></a></div>
-          <div class="index_img_card" id="index_event02"><a href=""><img src="image/index/index_event02.jpg" alt="#"></a></div>
-          <div class="index_img_card" id="index_event03"><a href=""><img src="image/index/index_event03.jpg" alt="#"></a></div>
-          <div class="index_img_card" id="index_event04"><a href=""><img src="image/index/index_event04.jpg" alt="#"></a></div>
-          <div class="index_img_card" id="index_event05"><a href=""><img src="image/index/index_event05.jpg" alt="#"></a></div>
-          <div class="index_img_card" id="index_event06"><a href=""><img src="image/index/index_event06.jpg" alt="#"></a></div>
+          <div class="index_img_card" id="index_event01">
+            <a href=""><img src="image/index/index_event01.jpg" alt="#"></a>
+          </div>
+          <div class="index_img_card" id="index_event02">
+            <a href=""><img src="image/index/index_event02.jpg" alt="#"></a>
+          </div>
+          <div class="index_img_card" id="index_event03">
+            <a href=""><img src="image/index/index_event03.jpg" alt="#"></a>
+          </div>
+          <div class="index_img_card" id="index_event04">
+            <a href=""><img src="image/index/index_event04.jpg" alt="#"></a>
+          </div>
+          <div class="index_img_card" id="index_event05">
+            <a href=""><img src="image/index/index_event05.jpg" alt="#"></a>
+          </div>
+          <div class="index_img_card" id="index_event06">
+            <a href=""><img src="image/index/index_event06.jpg" alt="#"></a>
+          </div>
         </div>
       </div>
       <div id="index_ts">
@@ -122,33 +206,33 @@
     <div id="index_footer">
       <div id="footer_title">
         <div id="footer_logo_box">
-          <i class="fas fa-mug-hot fa-2xl"></i><h2>Latte Cinema</h2>
+          <i class="fas fa-mug-hot fa-2xl"></i><h2>&nbsp;Latte Cinema</h2>
         </div>
         <select name="Family Site" id="index_footer_select">
           <option value="Family Site">Family Site</option>
         </select>
       </div>
       <div id="footer_menu">
-        <span class="v_bar">회사소개</span>
-        <span class="v_bar">이용약관</span>
-        <span class="v_bar text_line"><strong>개인정보처리방침</strong></span>
-        <span class="v_bar">이메일무단수집거부</span>
-        <span class="v_bar">고정형 영상정보처리기기 운영 및 관리방침</span>
-        <span class="v_bar">L.POINT회원안내</span>
-        <span class="v_bar">배정기준</span>
-        <span class="v_bar">채용안내</span>
-        <span class="v_bar">광고/임대문의</span>
+        <span class="footer_v_bar">회사소개</span>
+        <span class="footer_v_bar">이용약관</span>
+        <span class="footer_v_bar text_line"><strong>개인정보처리방침</strong></span>
+        <span class="footer_v_bar">이메일무단수집거부</span>
+        <span class="footer_v_bar">고정형 영상정보처리기기 운영 및 관리방침</span>
+        <span class="footer_v_bar">L.POINT회원안내</span>
+        <span class="footer_v_bar">배정기준</span>
+        <span class="footer_v_bar">채용안내</span>
+        <span class="footer_v_bar">광고/임대문의</span>
         <span>사회적책임</span>
       </div>
       <span>서울시 송파구 올림픽로 300 롯데월드타워 27층</span>
       <div>
-        <span class="v_bar">대표이메일 latte@lattesinema.com</span>
-        <span class="v_bar">고객센터 1544-XXXX(유료)</span>
-        <span class="v_bar">사업자 등록 번호 XXX-XX-XXXXXX</span>
-        <span class="v_bar">통신판매업신고번호 제2024호</span>
+        <span class="footer_v_bar">대표이메일 latte@lattesinema.com</span>
+        <span class="footer_v_bar">고객센터 1544-XXXX(유료)</span>
+        <span class="footer_v_bar">사업자 등록 번호 XXX-XX-XXXXXX</span>
+        <span class="footer_v_bar">통신판매업신고번호 제2024호</span>
         <span class="text_line"><strong>사업자정보확인<br></strong></span>
-        <span class="v_bar">조장 최병환</span>
-        <span class="v_bar">개인정보 보호 책임자 김병문</span>
+        <span class="footer_v_bar">대표 XXX</span>
+        <span class="footer_v_bar">개인정보 보호 책임자 XXX</span>
         <span>호스팅 제공자 라떼정보통신</span>
       </div>
       <p>Copyright&nbsp;<i class="fas fa-copyright"></i>&nbsp;LATTE Cultureworks All Right Reserved.</p>
@@ -164,6 +248,7 @@
       <img src="image/index/index_footer_award08.png" alt="#">
     </div>
   </footer>
+  <script src="js/index.js"></script>
   <script src="https://kit.fontawesome.com/383b0a4783.js" crossorigin="anonymous"></script>
 </body>
 </html>
