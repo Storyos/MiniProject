@@ -65,8 +65,11 @@ function zeroupeightdown(){
         teen_num.innerText=b;
         adult_num.innerText=a;
     }
+    else if(a+b+c==count){
+        window.location.href="./reserv_payment.html";
+    }
     else{
-        //결제하기 창으로 넘어감
+        alert("좌석을 모두 선택해주세요");
     }
 }
 
