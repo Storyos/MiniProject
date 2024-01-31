@@ -1,15 +1,16 @@
 .container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-}
+  width: 1000px;
+margin: 0 auto;
+
 
 .ticket {
   flex: 1;
 }
 
 .ticket img {
-  max-width: 100%;
+  width: 400px;
+height: 400px;
 }
 
 .package {
@@ -100,6 +101,8 @@ input[type="number"] {
 
 
 
+
+
 #online_ticket{
 border-collapse: collapse;
 border-spacing: 0;
@@ -142,7 +145,97 @@ margin-right: 5px;
   margin-top: 10px;
 
 
+}}
+
+
+
+/* 스타일링 */
+.accordion {
+  background-color: #f4f4f4;
+  color: #333;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  transition: 0.4s;
 }
+.active, .accordion:hover {
+  background-color: #ddd;
+}
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.usage-caution{
+width: 1000px;
+height: auto;
+margin: 0 auto;
+margin-top: 100px;
+
+
+}
+
+
+#ticket-container {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  margin-top: 20px;
+}
+#ticket-counter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+#ticket-counter button {
+  padding: 10px 20px;
+  font-size: 20px;
+  cursor: pointer;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 5px;
+  margin: 0 10px;
+}
+#ticket-count {
+  font-size: 24px;
+  margin: 0 10px;
+}
+#total-price {
+  font-size: 24px;
+  color: #007bff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
