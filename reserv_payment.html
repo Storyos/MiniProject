@@ -5,9 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/reserv_payment.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>
 </head>
 <body>
-    <div class="header">주문/결제</div>
+    <div class="header">
+        <a id="back_btn" class="fas fa-angle-left fa-x"></a>
+        <a href="./index.html" class="fas fa-home"></a>
+        <span style="margin-right: 50px;">주문/결제</span>
+        
+    </div>
     <div class="movie_info">
         <img src="./image/movie-poster/movie_poster0.jpg" alt="">
         <p>웡카 (2D 자막)</p>
@@ -15,12 +23,47 @@
             <br>1관 - 2D | 자막
         </span>
     </div>
-    <span style="font-weight: bold; font-size: larger;">할인 / 포인트 </span>
-    <BR></BR>
-    <div class="discount">
-        <button>Latte Point 조회 | Latte Point 카드번호</button>
+    
+    <div class="box">
+        <div class="sub-header">할인/포인트 </div>
+        <div class="discount">
+            <button>Latte Point 조회 | Latte Point 카드번호</button>
+            <div class="mini_btn">
+                <button>VIP/Friends</button>
+                <button>관람권</button>
+                <button>할인권</button>
+                <button>제휴할인</button>
+            </div>
+        </div>
     </div>
 
-    
+    <div class="box">
+        <div class="sub-header">최종 결제수단 </div>
+        <div class="discount">
+            <div class="icon_btn">
+                <button class="icon"><i class="fas fa-credit-card fa-3x"></i><br>신용카드</button>
+                <button class="icon"><i class="fas fa-money-check fa-3x"></i><br>간편결제</button>
+                <button><i class="fas fa-money-check-alt fa-3x"></i><br>내통장결제</button>
+                <button><i class="fas fa-mobile-alt fa-3x"></i><br>휴대폰</button>
+                <button><i class="fab fa-cc-paypal fa-3x"></i><br>PayPal</button>
+                <button><i class="fas fa-file-invoice-dollar fa-3x"></i><br>계좌이체</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="paybox box">
+        <div style="float: left;">
+            <span>상품금액 26,000원 - 할인금액 0 원 <BR></span>
+            <span>총 합계 :</span> <span style="font-size: 30px; color: red;">26,000원</span>
+        </div>
+        <button onclick="location.href='reservation_fin.html'" id="pay_btn">결제하기</button>
+    </div>
+    <footer>
+        <BR></BR>
+        결제대행 어쩌구
+        <br>
+        회원가입 희망자는 ㈜라떼시네마(이하 ‘회사’)가 제공하는 예매자 앱의 회원가입을 위하여, [예매자 결제 이용약관](이하 ‘이용약관’이라 함)에 동의 및 이행에 있어서 필요한 개인정보를 아래와 같이 ‘회사’에 제공하고, 본 동의서에 의거한 해당 정보의 이용에 동의합니다.
+    </footer>    
+    <script src="js/reserv_payment.js"></script>
 </body>
 </html>

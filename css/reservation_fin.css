@@ -1,0 +1,30 @@
+*{
+font-family: '나눔손글씨 열아홉의 반짝임';
+font-size: larger;
+font-weight: bold;
+}
+.reserve_info{
+    padding-left: 180px;
+    font-size: 25px;
+}
+
+.finish_box>img{
+    width: 170px;
+    height: 255px;
+    float: left;
+}
+.button1{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.finish_box{
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: whitesmoke;
+}
+.banners>img{
+    width: 400px;
+    margin-bottom: -10px;
+}
