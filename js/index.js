@@ -36,12 +36,29 @@ window.addEventListener('scroll', () => {
   
 })
 
+//화면 스크롤 > 모바일 메뉴 변경
+const mMenuBg = document.querySelector('.mheader_container')
+const mMenu = document.querySelector('.mheader_menuBox')
+
+window.addEventListener('scroll',()=>{
+
+  let scrollPosition = window.scrollY;
+
+  if(scrollPosition>200){
+    mMenuBg.style.top = '-100px'
+    mMenu.style.top = '0'
+  }else {
+    mMenuBg.style.top = '0'
+    mMenu.style.top = '-40px'
+  }
+})
+
+
 // 메뉴 마우스오버 > 드롭다운 메뉴 생성
 const dropDown = document.querySelectorAll(".header_menu_btn")
 const dropDownMenu = document.querySelectorAll(".dropBox")
 const dropDownBox = document.getElementById('header_bot_drop')
 const menuBox = document.getElementById('header_top')
-console.log(dropDownBox)
 
 dropDown.forEach((e)=>{
   e.addEventListener('mouseover', ()=>{
@@ -155,6 +172,19 @@ rArrow.addEventListener('click', ()=>{
   }
   console.log(cardIndex)
   moveCardSlide(cardIndex)
+})
+
+// mfooter 
+const mfooterArrow = document.querySelectorAll('.mfooter_title i')
+const mfooterInfo = document.querySelector('.mfooter_info')
+
+mfooterArrow[0].addEventListener('click', ()=>{
+  mfooterArrow[0].classList.toggle('fa-angle-up')
+  if(mfooterInfo.style.height==='0px'){
+    mfooterInfo.style.height='171px'
+  }else{
+    mfooterInfo.style.height='0'
+  }
 })
 
 
