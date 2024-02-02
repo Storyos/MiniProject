@@ -1,4 +1,16 @@
 /* Nav Bar 관련 CSS */
+.header>a{
+  margin-left: 10px;
+  float: left;
+}
+.header{
+  padding-top: 10px;
+  width: 100%;
+  text-align: center;
+  font-size: larger;
+  height: 30px;
+  background-color: snow;
+}
 .navbar {
   display: flex;
   justify-content: space-around;

@@ -31,12 +31,6 @@ body, html {
 }
 
 /* 메인 콘텐츠 및 오른쪽 사이드바의 스타일을 조정 */
-.main-content, .sidebar-right {
-    flex: 2; /* 네비게이션 및 사이드바보다 더 넓은 공간을 차지하도록 설정 */
-    /* 기존 스타일 유지 */
-}
-
-/* 나머지 스타일은 기존에 제공한 코드를 따릅니다. */
 
 
 .navigation ul {
@@ -56,9 +50,7 @@ body, html {
 }
 
 .sidebar-left, .sidebar-right {
-    width: 20%;
-    background: #2e4057; /* 사이드바 색상 조정 */
-    color: #fff;
+    background: #2e4057;     color: #fff;
     padding: 20px;
     overflow-y: auto;
 }
@@ -209,12 +201,12 @@ h1, h2, h3 {
 /* 기존에 제공된 스타일에 추가합니다. */
 
 .navigation {
-    flex: 0 0 10%; /* 네비게이션 바의 너비 고정 */
+    flex: 5%; /* 네비게이션 바의 너비 고정 */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 100vh;
-    flex: 1; /* 전체 너비에 비례하여 크기 조정 */
+    flex: 0.5; /* 전체 너비에 비례하여 크기 조정 */
     background: #2c3e50; /* 네비게이션 바 색상 */
     color: #fff; /* 네비게이션 텍스트 색상 */
     /* 나머지 스타일은 위에서 지정한 것과 동일 */
@@ -231,7 +223,7 @@ h1, h2, h3 {
 }
 
 .sidebar-left {
-    flex: 0 0 20%; /* 왼쪽 사이드바의 너비 고정 */
+    flex: 0 0 10%; /* 왼쪽 사이드바의 너비 고정 */
     display: flex;
     flex-direction: column; /* 세로 방향으로 내용을 정렬 */
 }
