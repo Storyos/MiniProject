@@ -5,9 +5,309 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Movie Ticket Purchase Form</title>
   <link rel="stylesheet" href="css/payment.css">
+  <link rel="stylesheet" href="css/index.css">
+
 </head>
+
+
+
+
+
+
 <body>
-  <div class="container">
+  <header>
+    <div id="header_container">
+      <div id="header_top">
+        <div class="header_list_box" id="header_top_grid01">
+          <a href="#"><i class="fab fa-facebook"></i>&nbsp;페이스북</a>
+          <a href="#"><i class="fab fa-youtube"></i>&nbsp;유튜브</a>
+          <a href="#"><i class="fab fa-instagram"></i>&nbsp;인스타그램</a>
+        </div>
+        <div class="header_logo_box" id="header_top_grid02">
+          <i class="fas fa-mug-hot fa-2xl"></i>
+          <h2>&nbsp;Latte Cinema</h2>
+        </div>
+        <div class="header_list_box" id="header_top_grid03">
+          <a href="#">맴버쉽</a>
+          <a href="#">고객센터</a>
+          <a href="#">단체관람/대관문의</a>
+          <a href="#">로그인</a>
+        </div>
+      </div>
+      <div id="header_bot_back">
+        <div id="header_bot">
+          <div class="header_list_box" id="header_bot_grid02">
+            <div class="header_menu_btn header_menu_bar">
+              <a href="reservation.html">예매</a>
+            </div>
+            <div class="header_menu_btn header_menu_bar">
+              <a href="movie.html">영화</a>
+            </div>
+            <div class="header_menu_btn header_menu_bar">
+              <a href="theater.html">영화관</a>
+            </div>
+            <div class="header_menu_btn header_menu_bar">
+              <a href="event.html">이벤트</a>
+            </div>
+            <div class="header_menu_btn">
+              <a href="store.html">스토어</a>
+            </div>
+          </div>        
+          <div class="header_list_box" id="header_bot_grid03">
+            <a href="#"><i class="fas fa-user"></i>&nbsp;회원가입</a>
+            <a href="#"><i class="fas fa-note-sticky"></i>&nbsp;바로예매</a>
+            <a href="#"><i class="fas fa-bars fa-xl"></i></a>
+          </div>
+        </div>
+      </div>
+      <div id="header_bot_drop">
+        <div id="drop_reservation" class="dropBox" style="display: none;">
+          <a href="">예매하기</a>
+          <a href="">상영시간표</a>
+          <a href="">할인안내</a>
+        </div>
+        <div id="drop_movie" class="dropBox" style="display: none;">
+          <div><a href="">홈</a></div>
+          <a href="">현재상영작</a>
+          <a href="">상영예정작</a>
+          <a href="">아르떼</a>
+          <a href="">국립극장</a>
+        </div>
+        <div id="drop_theater" class="dropBox" style="display: none;">
+          <a href="">스페셜관</a>
+          <a href="">서울</a>
+          <a href="">경기/인천</a>
+          <a href="">충청/대전</a>
+          <a href="">전라/광주</a>
+          <a href="">경북/대구</a>
+          <a href="">경남/부산/울살</a>
+          <a href="">강원</a>
+          <a href="">제주</a>
+        </div>
+        <div id="drop_event" class="dropBox" style="display: none;">
+          <a href="">홈</a>
+          <a href="">영화</a>
+          <a href="">시사회/무대인사</a>
+          <a href="">HOT</a>
+          <a href="">제휴할인</a>
+          <a href="">우리동네영화관</a>
+        </div>
+        <div id="drop_store" class="dropBox" style="display: none;">
+          <a href="">베스트</a>
+          <a href="">관람권</a>
+          <a href="">스낵음료</a>
+          <a href="">포토카드</a>
+        </div>
+      </div>
+      <div id="index_modal" style="display: none;">
+        <div id="index_modal_top">
+          <div id="index_modal_left">
+            <table>
+              <tbody>
+                <tr class="text_line">
+                  <th><span>예매</span></th>
+                  <th><span>영화</span></th>
+                  <th><span>영화관</span></th>
+                  <th><span>스페셜관</span></th>
+                  <th><span>스토어</span></th>
+                  <th><span>멤버십</span></th>
+                </tr>
+                <tr>
+                  <td>
+                    <ul>
+                      <li>예매하기</li>
+                      <li>상영시간표</li>
+                      <li>할인안내</li>
+                    </ul>
+                  </td>
+                  <td>
+                    <ul>
+                      <li>홈</li>
+                      <li>현재상역작</li>
+                      <li>상영예정작</li>
+                      <li>아르떼</li>
+                      <li>국립극장</li>
+                    </ul>
+                  </td>
+                  <td>
+                    <ul>
+                      <li>스페셜관</li>
+                      <li>서울</li>
+                      <li>경기/인천</li>
+                      <li>충청/대전</li>
+                      <li>전라/광주</li>
+                      <li>경북/대구</li>
+                      <li>경남/부산/울산</li>
+                      <li>강원</li>
+                      <li>제주</li>
+                    </ul>
+                  </td>
+                  <td>
+                    <ul>
+                      <li>홈</li>
+                      <li>샤롯데</li>
+                      <li>수퍼플렉스</li>
+                      <li>수퍼MX4D</li>
+                      <li>수퍼 4D</li>
+                      <li>수퍼 S</li>
+                      <li>컬러리움</li>
+                      <li>씨네컴포트</li>
+                      <li>씨네패밀리</li>
+                      <li>씨네커플</li>
+                      <li>씨네비즈</li>
+                    </ul>
+                  </td>
+                  <td>
+                    <ul>
+                      <li>베스트</li>
+                      <li>포토카드</li>
+                      <li>관람권</li>
+                      <li>스낵음료</li>
+                    </ul>
+                  </td>
+                  <td>
+                    <ul>
+                      <li>VIP</li>
+                      <li>짝꿍클럽</li>
+                      <li>틴틴클럽</li>
+                      <li>브라보클럽</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr class="text_line">
+                  <th><span>마이</span></th>
+                  <th><span>고객센터</span></th>
+                  <th><span>회원 서비스</span></th>
+                  <th><span>이벤트</span></th>
+                  <th><span>할인안내</span></th>
+                  <th><span>회사소개</span></th>
+                </tr>
+                <tr>
+                  <td>
+                    <ul>
+                      <li>FAQ</li>
+                      <li>공지사항</li>
+                      <li>1:1 문의</li>
+                      <li>단체관람/대관문의</li>
+                      <li>분실물문의</li>
+                    </ul>
+                  </td>
+                  <td>
+                    <ul>
+                      <li>FAQ</li>
+                      <li>공지사항</li>
+                      <li>1:1 문의</li>
+                      <li>단체관람/대관문의</li>
+                      <li>분실물문의</li>
+                    </ul>
+                  </td>
+                  <td>
+                    <ul>
+                      <li>로그인</li>
+                      <li>회원가입</li>
+                      <li>아이디/비밀번호찾기</li>
+                      <li>이용약관</li>
+                      <li>개인정보처리방침</li>
+                      <li>이메일무단수집거부</li>
+                      <li>고정형 영상정보처리기기 운영 및 관리방침</li>
+                      <li>L.POINT회원안내</li>
+                    </ul>
+                  </td>
+                  <td>
+                    <ul>
+                      <li>영화</li>
+                      <li>시사회/무대인사</li>
+                      <li>HOT</li>
+                      <li>제휴할인</li>
+                      <li>우리동네영화관</li>
+                    </ul>
+                  </td>
+                  <td>
+                    <ul>
+                      <li>신용카드</li>
+                      <li>포인트</li>
+                      <li>틍신사</li>
+                      <li>기타결제수단</li>
+                    </ul>
+                  </td>
+                  <td>
+                    <ul>
+                      <li>회사소개</li>
+                      <li>채용안내</li>
+                      <li>광고/임대문의</li>
+                      <li>사회적 책임</li>
+                    </ul>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div id="index_modal_right">
+            <div id="index_modal_login">
+              <a href="">로그인</a>
+            </div>
+            <div id="index_modal_signin">
+              <p>로그인 하시고<br>다양한 혜택을 확인하세요요.</p>
+              <a href="">회원가입</a>
+            </div>
+            <div><img src="image/index/index_modal_img02.png" alt=""></div>
+          </div>
+        </div>
+        <div id="index_modal_bot">
+          <img src="image/index/index_modal_img01.jpg" alt="">
+        </div>
+      <div id="index_modal_esc">
+        <i class="fas fa-x fa-2xl"></i>
+      </div>
+      </div>
+    </div>
+    <div style="position: absolute;" class="mheader_container">
+      <div class="mheader_top">
+        <div class="mheader_logoBox"><img src="image/index/logo-removebg.png" alt=""></div>
+        <div><a href="reservation.html"><i class="fas fa-ticket-simple fa-xl" style="color: white;"></i></a></div>
+      </div>
+      <nav class="mheader_bot">
+        <ul class="mheader_menuBox">
+          <ul>
+            <!-- <i class="fas fa-mug-hot"></i> -->
+          </ul>
+          <ul class="mheader_menu_list">
+            <li><a href="reservation.html">예매</a></li>
+            <li class="mheader_v_bar"><a href="movie.html">영화</a></li>
+            <li class="mheader_v_bar"><a href="theater.html">영화관</a></li>
+            <li class="mheader_v_bar"><a href="event.html">이벤트</a></li>
+            <li class="mheader_v_bar"><a href="store.html">스토어</a></li>
+          </ul>
+          <ul>
+            <a href="reservation.html"><i class="fas fa-ticket-simple fa-xs"></i></a>
+          </ul>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="container"> 
     <div class="ticket">
       <img src="image/store_best1.jpg" alt="Movie Ticket">
     </div>
@@ -121,7 +421,74 @@
   </div>
 
 
-
+  <footer>
+    <div id="index_footer">
+      <div id="footer_title">
+        <div id="footer_logo_box">
+          <i class="fas fa-mug-hot fa-2xl"></i><h2>&nbsp;Latte Cinema</h2>
+        </div>
+        <select name="Family Site" id="index_footer_select">
+          <option value="Family Site">Family Site</option>
+        </select>
+      </div>
+      <div id="footer_menu">
+        <span class="footer_v_bar">회사소개</span>
+        <span class="footer_v_bar">이용약관</span>
+        <span class="footer_v_bar text_line"><strong>개인정보처리방침</strong></span>
+        <span class="footer_v_bar">이메일무단수집거부</span>
+        <span class="footer_v_bar">고정형 영상정보처리기기 운영 및 관리방침</span>
+        <span class="footer_v_bar">L.POINT회원안내</span>
+        <span class="footer_v_bar">배정기준</span>
+        <span class="footer_v_bar">채용안내</span>
+        <span class="footer_v_bar">광고/임대문의</span>
+        <span>사회적책임</span>
+      </div>
+      <span>서울시 송파구 올림픽로 300 롯데월드타워 27층</span>
+      <div>
+        <span class="footer_v_bar">대표이메일 latte@lattesinema.com</span>
+        <span class="footer_v_bar">고객센터 1544-XXXX(유료)</span>
+        <span class="footer_v_bar">사업자 등록 번호 XXX-XX-XXXXXX</span>
+        <span class="footer_v_bar">통신판매업신고번호 제2024호</span>
+        <span class="text_line"><strong>사업자정보확인<br></strong></span>
+        <span class="footer_v_bar">대표 XXX</span>
+        <span class="footer_v_bar">개인정보 보호 책임자 XXX</span>
+        <span>호스팅 제공자 라떼정보통신</span>
+      </div>
+      <p>Copyright&nbsp;<i class="fas fa-copyright"></i>&nbsp;LATTE Cultureworks All Right Reserved.</p>
+    </div>
+    <div id="index_footer_cardBox">
+      <img src="image/index/index_footer_award01.png" alt="#">
+      <img src="image/index/index_footer_award02.png" alt="#">
+      <img src="image/index/index_footer_award03.png" alt="#">
+      <img src="image/index/index_footer_award04.png" alt="#">
+      <img src="image/index/index_footer_award05.png" alt="#">
+      <img src="image/index/index_footer_award06.png" alt="#">
+      <img src="image/index/index_footer_award07.png" alt="#">
+      <img src="image/index/index_footer_award08.png" alt="#">
+    </div>
+  
+    <div class="mfooter">
+      <div class="mfooter_title">
+        <span><strong>롯데컬쳐웍스(주)&nbsp;</strong></span><i class="fas fa-angle-down"></i>
+      </div>
+      <div class="mfooter_info">
+        <span>대표이사 XXX<br></span>
+        <span>부산광역시 남구 용소로 45 부경대학교 대연캠퍼스<br></span>
+        <span>대표이메일 latte@lattesinema.com<br></span>
+        <span>고색센터 1544-XXXX<br></span>
+        <span>사업자 등록번호 XXX-XX-XXXXXX<br></span>
+        <span>통신판매업신고번호 제1184호 사업자정보확인<br></span>
+        <span>개인정보 보호 책임자 XXX<br></span>
+        <span>호스팅 제공자 라떼정보통신<br></span>
+      </div>
+      <ul class="mfooter_bot">
+        <li class="footer_v_bar">이용약관</li>
+        <li class="footer_v_bar"><strong>개인정보처리방침</strong></li>
+        <li>고객센터</li>
+      </ul>
+  
+    </div>
+  </footer>
  
 
 
@@ -134,7 +501,7 @@
 
 
 
-
+<script src="js/index.js"></script>
 <script src="js/payment.js"></script>
 </body>
 </html>
