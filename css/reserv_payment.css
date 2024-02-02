@@ -1,15 +1,21 @@
 body{
     background-color: whitesmoke;
 }
+button:hover{
+    cursor: pointer;
+}
+
 .header{
     padding-top: 10px;
+    width: 100%;
     text-align: center;
-    font-size: large;
+    font-size: larger;
     height: 30px;
     background-color: snow;
 }
 .movie_info{
-    margin: 20px;
+    width: 100%;
+    margin-top: 10px;
     background-color: white;
     border: 1px solid white;
 }
@@ -21,12 +27,68 @@ body{
     width: 80px;
     margin-right: 10px;
 }
+
+.sub-header{
+    font-weight: bold;
+    font-size: larger;
+    margin-bottom: 5px;
+}
+
+.box{
+    background-color: white;
+    margin-top: 10px;
+    padding-bottom: 10px;
+}
+
 .discount{
     text-align: center;
 }
 .discount>button{
     height: 60px;
+    text-align: center;
     font-size: larger;
     border: 1px solid black;
     border-radius: 5px;
+    padding: 10px;
+}
+/*할인 포인트 관련 버튼 */
+.mini_btn>button{
+    border: 1px solid black;
+    height: 60px;
+    display: inline;
+    margin-left: 2.4px;
+    font-size: 17px;
+    border-radius: 5px;
+}
+.discount>div{
+    margin-top: 10px;
+    font-size: larger;
+}
+#pay_btn{
+    float: right;
+    font-size: 30px;
+    height: 70px;
+    background-color: red;
+    color: white;
+    border: 1px solid red;
+}
+.header>a{
+    margin-left: 10px;
+    float: left;
+}
+/* 최종 결제수단 버튼 */
+.icon_btn>button{
+    border: 1px solid black;
+    height: 100px;
+    width: 120px;
+    margin-left: 2.4px;
+    font-size: 17px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.paybox{
+    height: 60px;
+}
+footer{
+    color: grey;
 }
