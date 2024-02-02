@@ -21,7 +21,7 @@ for(let i = 0; i <8; i++){
     <p class="movie-time">${movie_time[i]}</p>
     <p class="movie-date">${movie_date[i]}</p>
     <p class="movie-detail"><a href="#상세보기">상세정보</a></p>
-    영화선택하기 <input type="radio" name="radio_answer" 
+    영화선택 <input type="radio" name="radio_answer" 
     onclick='getMovie(event)' value="${movie_title[i]}" />
 </div>
 </div>`;
@@ -36,16 +36,5 @@ function getMovie(event) {
     `
     ${event.target.value}
     `;
-    next_btn.style.display = 'block';   
-}
-
-//다음으로 버튼을 클릭했을 때, 발생하는 이벤트
-
-
-const bar_menu = document.querySelectorAll(".navbar_menu");
-for(b of bar_menu){
-    b.addEventListener("click", (e) => {
-        console.log(b+"is Clicked");
-    })
-}
-
+    location.href='reservation-theater.html';
+};

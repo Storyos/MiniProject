@@ -56,9 +56,6 @@ li {
     list-style: none;
 }
 
-.calendar_list {
-    width: 300px;
-}
 
 .date_list {
     padding-top: 30px;
@@ -153,7 +150,7 @@ body{
     height: 500px;
     position: absolute;
     bottom: 0%;
-    float: left;
+    /* float: left; */
     background-color: white;
     border: solid 1px black;
     border-radius: 5px;
