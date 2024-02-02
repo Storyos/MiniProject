@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>부산본점 - MY 영화관</title>
+<link rel="stylesheet" href="css/theater.css">
+</head>
+<body>
+
+ 
+
+  <div id="parkingPopup" class="popup">
+    <div class="popup-content">
+      <span class="close">×</span>
+      <h2>롯데시네마 부산본점 주차 안내</h2>
+      <ol>
+        <li>입차 시간 기준 3시간내
+          <ul>
+            <li>주간 (07시 00분 ~ 18시 59분) 2,000원</li>
+            <li>야간 (19시 00분 ~ 익일 06시 59분) 1,500원</li>
+          </ul>
+        </li>
+        <li>3시간 이후 주차 요금 정산
+          <ul>
+            <li>추가 10분당 500원 요금 정산</li>
+          </ul>
+        </li>
+      </ol>
+      <button id="confirmButton" >확인</button> <!-- 추가 -->
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container">
+  <h1>
+    <span style="font-size: 36px;">부산본점</span>
+    <button class="button">MY 영화관</button>   
+    <button class="button">단체/대관문의</button>
+  </h1>
+  <p>총 상영관 수 <strong>11개관</strong> ㅣ 총 좌석수 <strong>2,062석</strong></p>
+  <p><strong>부산 부산진구 가야대로 772</strong></p>
+  <div class="notice">
+    <p><strong>공지사항</strong> 평촌관 2/1(금) 화재 경보기 오작동으로 인한 상영 중단 관련···</p>
+    
+  </div>
+  <div class="icons">
+    <span style="font-size: 36px;">🚌 <span style="font-size: 15px;">대중교통 안내</span></span>
+    <span style="font-size: 36px;">🚗<span style="font-size: 15px;">자가용/주차 안내</span></span>
+    <span style="font-size: 36px;">🗺️<span style="font-size: 15px;">지도보기</span></span>
+  </div>
+</div>
+
+<div id="modalTransport" class="modal">
+  <div class="modal-content">
+    <span class="close">×</span>
+    <h2>대중교통 안내</h2>
+<span style="font-size: 36px;">🚌<span style="font-size: 15px;">버스</span></span>
+<ul class="list_txt"><li><span class="tit">[백화점 영업시간 내]-서면역 1,2호선 지하상가 &gt; 롯데백화점 지하 1층 진입 &gt; 백화점 내 E/V 이용(지하 1층 -&gt; 9층) &gt; E/S 이용(9층 -&gt; 10층)</span><span class="txt"></span></li><li><span class="tit">[백화점 영업시간 외]-롯데백화점 1층 정문 &gt; 정문에서 건물 좌측을 따라 건물 뒷편으로 이동 &gt; 롯데백화점 1층(후문) 진입 &gt; E/V이용 (1층 -&gt; 10층)</span><span class="txt"></span></li></ul>
+<span style="font-size: 36px;">🚇<span style="font-size: 15px;">지하철</span></span>
+<ul class="list_txt"><li><span class="tit">[사상방면 -&gt; 롯데백화점]31번, 33번, 62번</span><span class="txt"></span></li><li><span class="tit">[부산역방면 -&gt; 롯데백화점]17번,67번, 81번, 85번, 87번,1000번(급행), 1004번(급행)</span><span class="txt"></span></li><li><span class="tit">[해운대방면 -&gt; 롯데백화점]31번, 141번</span><span class="txt"></span></li><li><span class="tit">[동래방면 -&gt; 롯데백화점]31번, 77번</span><span class="txt"></span></li></ul>
+
+
+
+
+   
+    
+
+    
+  </div>
+</div>
+
+<div id="modalParking" class="modal">
+  <div class="modal-content">
+    <span class="close">×</span>
+    <h2>자가용/주차안내</h2>
+    <span style="font-size: 36px;">🚗<span style="font-size: 15px;">자가용</span></span>
+    
+
+
+    <p>부산 부산진구 가야대로 772</p>
+<span class="parking-guiding">
+  <img src="image/theater_guiding.png" alt="">
+  <p style="font-size: 15px;"> 주차요금 안내</p>
+</span>
+    
+
+    <ul class="list_txt"><li><span class="tit">입차 시간 기준 3시간내</span><span class="txt">- 주간 (07시 00분 ~ 18시 59분) 2,000원<br>- 야간 (19시 00분 ~ 익일 06시 59분) 1,500원</span></li><li><span class="tit">3시간 이후 주차 요금 정산</span><span class="txt">- 추가 10분당 500원 요금 정산</span></li></ul>
+
+
+
+
+
+  </div>
+</div>
+
+<div id="modalMap" class="modal">
+  <div class="modal-content">
+    <span class="close">×</span>
+    <h2>지도보기</h2>
+    <img src="image/theater_modalMap.png" alt="" srcset="">
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="14">상영 시간표</th>
+    </tr>
+    <tr>
+      <th colspan="14">2월</th> <!-- Added February here -->
+    </tr>
+    <tr>
+      <th class="date">
+        <div class="circle black" onclick="toggleCircle(this)">1</div>
+      </th>
+      <th class="date">
+        <div class="circle" onclick="toggleCircle(this)">2</div>
+      </th>
+      <th class="date blue">
+        <div class="circle" onclick="toggleCircle(this)">3</div> <!-- Blue color for number 3 -->
+      </th>
+      <th class="date red">
+        <div class="circle" onclick="toggleCircle(this)">4</div> <!-- Red color for number 4 -->
+      </th>
+      <th class="date">
+        <div class="circle" onclick="toggleCircle(this)">5</div>
+      </th>
+      <th class="date">
+        <div class="circle" onclick="toggleCircle(this)">6</div>
+      </th>
+      <th class="date blue"> <!-- Blue color for Saturday -->
+        <div class="circle" onclick="toggleCircle(this)">7</div>
+      </th>
+      <th class="date">
+        <div class="circle" onclick="toggleCircle(this)">8</div>
+      </th>
+      <th class="date">
+        <div class="circle" onclick="toggleCircle(this)">9</div>
+      </th>
+      <th class="date blue">
+        <div class="circle" onclick="toggleCircle(this)">10</div> <!-- Blue color for number 10 -->
+      </th>
+      <th class="date red">
+        <div class="circle" onclick="toggleCircle(this)">11</div> <!-- Red color for number 11 -->
+      </th>
+      <th class="date">
+        <div class="circle" onclick="toggleCircle(this)">12</div>
+      </th>
+      <th class="date">
+        <div class="circle" onclick="toggleCircle(this)">13</div>
+      </th>
+      <th class="date red"> <!-- Red color for Sunday -->
+        <div class="circle" onclick="toggleCircle(this)">14</div>
+      </th>
+    </tr>
+    <tr>
+      <th>오늘</th>
+      <th class="date">금</th>
+      <th class="date blue" >토</th>
+      <th class="date red">일</th>
+      <th class="date">월</th>
+      <th class="date">화</th>
+      <th class="date">수</th>
+      <th class="date">목</th>
+      <th class="date">금</th>
+      <th class="date blue">토</th>
+      <th class="date red">일</th>
+      <th class="date">월</th>
+      <th class="date">화</th>
+      <th class="date">수</th>
+    </tr>
+  </thead>
+  <div class="rating-guide">
+    <!-- 이모티콘과 함께 등급 안내 -->
+    <div title="전체 관람가">🟢 전체 관람가</div>
+    <div title="만 12세 이상 관람가">🔵 만 12세 이상 관람가</div> 
+    <div title="만 15세 이상 관람가">⚫ 만 15세 이상 관람가</div> 
+    <div title="청소년 관람불가">🔴 청소년 관람불가</div>
+    <!-- 모달 버튼 -->
+    <!-- 버튼을 클릭하여 모달을 엽니다 -->
+    <button class="btn" onclick="openModal()">⚠ 관람등급안내 </button>
+
+    <!-- 모달 -->
+    <div id="ratingModal" class="rating-modal">
+        <!-- 모달 내용 -->
+        <div class="rating-modal-content">
+            <span class="rating-close" onclick="closeModal()">&times;</span>
+            <h2><span style="font-size: 24px;">⚠</span> 관람등급안내</h2>
+            <p><strong>🟢 전체 관람가:</strong> 모든 연령의 관람객이 관람할 수 있는 영화</p>
+            <p><strong>🔵 만 12세 이상 관람가:</strong> 만 12세 미만의 관람객은 관람할 수 없는 영화. 부모 및 보호자 동반 시 관람 가능</p>
+            <p><strong>⚫ 만 15세 이상 관람가:</strong> 만 15세 미만의 관람객은 관람할 수 없는 영화.
+              부모 및 보호자 동반 시 관람 가능</p>
+            <p><strong>🔴 청소년 관람불가:</strong> 만 18세 미만의 관람객은 관람할 수 없는 영화.
+              보호자 동반과 관계없이 초중고 재학 중인 청소년 및 영유아 관람 불가</p>
+        </div>
+    </div>
+
+  </div>
+</table>
+
+<div id="myModal" class="mymodal">
+  <div class="modal-content">
+    <span class="mymodal-close" onclick="closeModal2()">&times;</span>
+    <h2 id="modal-movie-title"></h2>
+    <p>영화 시작 시간: <span id="modal-start-time"></span></p>
+    <p>상영관: <span id="modal-room"></span></p>
+    <p>좌석수: <span id="modal-seats"></span></p>
+    <p>전체 좌석수: <span id="modal-total-seats"></span></p>
+    <button onclick="reserve()">영화 예약</button>
+  </div>
+</div>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Movie Schedule -->
+<div class="movie-schedule" id="movieSchedule">
+  <!-- Movie schedule content will be dynamically added here -->
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="js/theater.js"></script>
+</body>
+</html>
+
+
