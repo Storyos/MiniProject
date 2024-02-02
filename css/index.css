@@ -210,12 +210,11 @@ td li {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: black;
-  opacity: 0.7;
+  background-color: white;
+  opacity: 0.9;
 }
 
 .dropBox {
-  border: 1px solid black;
   max-width: 980px;
   height: 40px;
   display: flex;
@@ -481,43 +480,12 @@ td li {
     justify-content: center;
     align-items: center;
   }
-}
-@media screen and (width: 414px) {
-  #content_card_slide {
-    width: 100%;
-    padding-bottom: 20px;
-    margin-bottom: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-}
-
-@media screen and (min-width: 415px) {
   .content_card_slideBox {
     position:relative;
     width:980px;
     height: 330px;
     overflow:hidden
   }
-}
-@media screen and (width: 414px) {
-  .content_card_slideBox {
-    position:relative;
-    width:980px;
-    height: 370px;
-    overflow:hidden
-  }
-}
-
-#content_cardBox {
-  display: flex;
-  position:absolute;
-  left:0;
-  top:0;
-  transition: transform 0.5s ease;
-}
-@media screen and (min-width: 415px) {
   .content_card {
     margin: 6px;
     position: relative;
@@ -540,8 +508,32 @@ td li {
     align-items: center;
     background-color: rgba(0, 0, 0, 0.7);
   }
+  .card_num {
+    position: absolute;
+    color: white;
+    top: 70%;
+    font-size: 30px;
+    font-weight: bold;
+    font-style: italic;
+    width: 100%;
+    background-image: linear-gradient(to top, black, rgba(255, 255, 255, 0));
+  }
 }
 @media screen and (width: 414px) {
+  #content_card_slide {
+    width: 100%;
+    padding-bottom: 20px;
+    margin: 30px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .content_card_slideBox {
+    position:relative;
+    width:980px;
+    height: 370px;
+    overflow:hidden
+  }
   .content_card {
     margin: 6px;
     position: relative;
@@ -556,7 +548,26 @@ td li {
     height: 262px;
     object-fit: cover;
   }
+  .card_num {
+    position: absolute;
+    color: white;
+    top: 63%;
+    font-size: 30px;
+    font-weight: bold;
+    font-style: italic;
+    width: 100%;
+    background-image: linear-gradient(to top, black, rgba(255, 255, 255, 0));
+  }
 }
+
+#content_cardBox {
+  display: flex;
+  position:absolute;
+  left:0;
+  top:0;
+  transition: transform 0.5s ease;
+}
+
 .card_hover{
   width: 100%;
   height: 100%;
@@ -576,30 +587,6 @@ td li {
   margin-bottom: 10px;
 }
 
-@media screen and (min-width: 415px) {
-  .card_num {
-    position: absolute;
-    color: white;
-    top: 70%;
-    font-size: 30px;
-    font-weight: bold;
-    font-style: italic;
-    width: 100%;
-    background-image: linear-gradient(to top, black, rgba(255, 255, 255, 0));
-  }
-}
-@media screen and (width: 414px) {
-  .card_num {
-    position: absolute;
-    color: white;
-    top: 63%;
-    font-size: 30px;
-    font-weight: bold;
-    font-style: italic;
-    width: 100%;
-    background-image: linear-gradient(to top, black, rgba(255, 255, 255, 0));
-  }
-}
 .card_title {
   display: flex;
   justify-content: center;
@@ -694,19 +681,12 @@ td li {
   .card_controller {
     height: 100%;
   }
-}
-@media screen and (width: 414px) {
-  .card_controller {
-    display: none;
+  .card_prev, .card_next {
+    cursor: pointer;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
   }
-}
-.card_prev, .card_next {
-  cursor: pointer;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 10px;
-}
-@media screen and (min-width: 415px) {
   .mCard_btn {
     display: none;
   }
@@ -726,6 +706,7 @@ td li {
     margin-top: 5px;
   }
 }
+
 /* ----- special 영역 ----- */
 
 @media screen and (min-width: 415px) {
@@ -751,6 +732,43 @@ td li {
   }
 }
 
+@media screen and (min-width: 415px) {
+  .index_mSpecial_cardBox {
+    display: none;
+  }
+}
+@media screen and (width: 414px) {
+  .index_mSpecial_cardBox{
+    padding: 25px;
+    margin: 5px 15px 15px 15px;
+    border-radius: 15px;
+    background-color: #D8CDB1;
+  }
+  .index_mSpecial_cardBox > p {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 15px;
+  }
+  .mSpecial_img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .mSpecial_img > img {
+    width: 50px;
+    height: 50px;
+    margin: 10px 22px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    border-radius: 40%;
+  }
+  .mSpecial_grid > img {
+    width: 332px;
+    padding-top: 15px;
+  }
+  
+}
+
 
 
 
@@ -759,12 +777,56 @@ td li {
   #index_event{
     margin-bottom: 25px;
   }
+  .index_mEvent {
+    display: none;
+  }
 }
 @media screen and (width: 414px) {
   #index_event{
     display: none;
   }
+  .index_mEventBox {
+    height: 600px;
+    border-radius: 15px;
+    margin: 20px 15px ;
+    background-repeat: no-repeat;
+    background-image: url("../image/index/index_mEvent_img01.png"), linear-gradient(#90CAFC, #21A7A9);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .index_mEventBox > ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .index_mEventBox_li {
+    border-radius: 10px;
+    width: 170px;
+    height: 170px;
+    overflow: hidden;
+    background-color: white;
+    margin: 0 5px 10px 5px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)
+
+  }
+  .index_mEventBox_li > img {
+    width: 180px;
+    height: 100px;
+  }
+  .index_mEventBox_li > p {
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 5px;
+    text-align: left;
+  }
+  .index_mEventBox_li > span {
+    padding: 15px 0 0 10px;
+    display: block;
+  }
 }
+
 #index_event_cardBox {
   max-width: 980px;
   margin: 0 auto;
@@ -823,8 +885,9 @@ td li {
   align-items: center;
 }
 
-/* ----- benefit 영역 ----- */
 
+
+/* ----- benefit 영역 ----- */
 @media screen and (min-width: 415px) {
   #index_benefit {
     width: 980px;
@@ -834,14 +897,7 @@ td li {
 }
 @media screen and (width: 414px) {
   #index_benefit {
-    width: 414px;
-    margin: 0 auto;
-    margin-bottom: 25px;
-  }
-  .index_benefit_card > img {
-    width: 82px;
-    height: auto;
-    
+    display: none;
   }
 }
 
@@ -889,8 +945,10 @@ td li {
   margin: 0;
   font-size: 0.75rem;
 }
-/* ----- ad 영역 ----- */
 
+
+
+/* ----- ad 영역 ----- */
 #index_ad {
   width: 100%;
 }
@@ -909,10 +967,26 @@ td li {
   .index_mAd{
     display: none;
   }
+  .index_mBenefit {
+    display: none;
+  }
 }
 @media screen and (width: 414px) {
   .index_ad_cardBox {
     display: none;
+  }
+  .index_mBenefit{
+    height: 105px;
+    overflow: hidden;
+  }
+  .index_mBenefit_cardBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .index_mBenefit_card img {
+    width: 83px;
+    height: auto;
   }
   
   #ad_back {
@@ -1016,6 +1090,7 @@ td li {
 .mfooter_info {
   overflow: hidden;
   margin-bottom: 15px;
+  height: 0;
   transition:all .5s ease;
 }
 
