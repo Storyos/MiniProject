@@ -5,7 +5,8 @@ const topMenu_right = document.getElementById("header_bot_grid03")
 const topMenu_center_btn = document.querySelectorAll(".header_menu_btn a")
 const topMenu_right_btn = document.querySelectorAll("#header_bot_grid03 a")
 const topDropMenu = document.getElementById("header_bot_drop")
-
+const topDropHover = document.querySelectorAll(".dropBox a")
+// .offsetTop은 요소의 위치값을 찾아옴.
 let topMenuY = topMenu.offsetTop;
 
 window.addEventListener('scroll', () => {
@@ -13,22 +14,31 @@ window.addEventListener('scroll', () => {
   let scrollPosition = window.scrollY;
   
   if(scrollPosition > topMenuY){
+
     topMenu.setAttribute('id','header_bot_back_scoll')
     topDropMenu.setAttribute('id','header_bot_drop_hover')
+
     topMenu_center_btn.forEach((e)=>{
       e.style.color = 'black'
     })
     topMenu_right_btn.forEach((e)=>{
+      e.style.color = 'black'
+    })
+    topDropHover.forEach((e)=>{
       e.style.color = 'black'
     })
     topMenu_right.style.color = 'black'
   }else {
     topMenu.setAttribute('id','header_bot_back')
     topDropMenu.setAttribute('id','header_bot_drop')
+
     topMenu_center_btn.forEach((e)=>{
       e.style.color = 'white'
     })
     topMenu_right_btn.forEach((e)=>{
+      e.style.color = 'white'
+    })
+    topDropHover.forEach((e)=>{
       e.style.color = 'white'
     })
     topMenu_right.style.color = 'white'
@@ -130,17 +140,28 @@ modarBoxEsc.addEventListener('click', (e)=>{
 
 //ImgSlide
 let slideIndex = 0;
-const slideImg = document.querySelectorAll('.content_slides_box li');
+const slideList = document.querySelectorAll('.content_slides_box li');
+const slideImg = document.querySelectorAll('.content_slides_box li img');
 const slideBox = document.querySelector('.content_slides_box');
+
+if(window.innerWidth===414){
+  let imgNum = 0;
+  // 모바일 환경에서 li의 이미지 경로를 통으로 수정.
+  slideImg.forEach(e => {
+    imgNum++
+    e.src = `image/index/index_mSlide_img0${imgNum}.jpg`
+  })
+}
+
 function moveImgSlide(n) {
   slideIndex += n;
-  if (slideIndex >= slideImg.length) {
-    slideIndex = 0; // 끝에 도달하면 처음 이미지부터 다시 시작
+  if (slideIndex >= slideList.length) {
+    slideIndex = 0;
   }
   if (slideIndex < 0) {
-    slideIndex = slideImg.length - 1;
+    slideIndex = slideList.length - 1;
   }
-  const offset = -slideIndex * 25; // 슬라이드 이동 거리 계산 (단위: %)
+  const offset = -slideIndex * 25;
   slideBox.style.transform = `translateX(${offset}%)`;
 }
 
@@ -152,7 +173,8 @@ const lArrow = document.querySelector('.card_prev')
 const rArrow = document.querySelector('.card_next')
 
 function moveCardSlide(e){
-  const cardOffset = -e * 9.1; // 슬라이드 이동 거리 계산 (단위: %)
+  // 슬라이드 이동 거리 계산 그냥 노가다로 값을찾음. 알아보고 수정할것.
+  const cardOffset = -e * 9.1;
   cardBox.style.transform = `translateX(${cardOffset}%)`
 }
 
@@ -162,7 +184,6 @@ lArrow.addEventListener('click', ()=>{
     cardIndex = cards.length-5
   }
   
-  console.log(cardIndex)
   moveCardSlide(cardIndex)
 })
 rArrow.addEventListener('click', ()=>{
@@ -170,20 +191,121 @@ rArrow.addEventListener('click', ()=>{
   if(cardIndex>cards.length-5){
     cardIndex = 0;
   }
-  console.log(cardIndex)
   moveCardSlide(cardIndex)
 })
 
+//special
+const spLogo = document.querySelectorAll('.mSpecial_img > img')
+const spBg = document.querySelector('.index_mSpecial_cardBox')
+const spImg = document.querySelector('.mSpecial_grid > img')
+const spUderLine = document.querySelectorAll('.index_title')
+
+if(window.innerWidth===414){
+  spUderLine[1].classList.remove('gray_underline')
+}
+
+console.log(spBg)
+spLogo.forEach( e => {
+  e.addEventListener('click', ()=>{
+    // 너무 무식하게 만든거같음. 다른방법이없을까? 
+    switch(e) {
+      case spLogo[0]:
+        spBg.style.backgroundColor = '#D8CDB1'
+        spImg.src = 'image/index/mSpecial_grid_img01.png'
+        e.style.border = '2px solid #FF8E00'
+        spLogo.forEach(e => {
+          if(e!=spLogo[0]){
+            e.style.border = ''
+          }
+        })
+        break;
+      case spLogo[1]:
+        spBg.style.backgroundColor = '#C0CCDF'
+        spImg.src = 'image/index/mSpecial_grid_img02.png'
+        e.style.border = '2px solid #5B74E8'
+        spLogo.forEach(e => {
+          if(e!=spLogo[1]){
+            e.style.border = ''
+          }
+        })
+        break;
+      case spLogo[2]:
+        spBg.style.backgroundColor = '#D3D9EB'
+        spImg.src = 'image/index/mSpecial_grid_img03.png'
+        e.style.border = '2px solid #1C57FF'
+        spLogo.forEach(e => {
+          if(e!=spLogo[2]){
+            e.style.border = ''
+          }
+        })
+        break;
+      case spLogo[3]:
+        spBg.style.backgroundColor = '#EFCFD3'
+        spImg.src = 'image/index/mSpecial_grid_img04.png'
+        e.style.border = '2px solid #FF5C70'
+        spLogo.forEach(e => {
+          if(e!=spLogo[3]){
+            e.style.border = ''
+          }
+        })
+        break;
+      case spLogo[4]:
+        spBg.style.backgroundColor = '#C2D3DF'
+        spImg.src = 'image/index/mSpecial_grid_img05.png'
+        e.style.border = '2px solid #539DD6'
+        spLogo.forEach(e => {
+          if(e!=spLogo[4]){
+            e.style.border = ''
+          }
+        })
+        break;
+      case spLogo[5]:
+        spBg.style.backgroundColor = '#DEC7E5'
+        spImg.src = 'image/index/mSpecial_grid_img06.png'
+        e.style.border = '2px solid #9B2BB9'
+        spLogo.forEach(e => {
+          if(e!=spLogo[5]){
+            e.style.border = ''
+          }
+        })
+        break;
+      case spLogo[6]:
+        spBg.style.backgroundColor = '#C8D7E0'
+        spImg.src = 'image/index/mSpecial_grid_img07.png'
+        e.style.border = '2px solid #5BC1E9'
+        spLogo.forEach(e => {
+          if(e!=spLogo[6]){
+            e.style.border = ''
+          }
+        })
+        break;
+      case spLogo[7]:
+        spBg.style.backgroundColor = '#D4CEE0'
+        spImg.src = 'image/index/mSpecial_grid_img08.png'
+        e.style.border = '2px solid #5830B7'
+        spLogo.forEach(e => {
+          if(e!=spLogo[7]){
+            e.style.border = ''
+          }
+        })
+        break;
+    }
+  })
+})
+
+
+
 // mfooter 
-const mfooterArrow = document.querySelectorAll('.mfooter_title i')
+const mfooterArrow = document.querySelector('.mfooter_title > i')
 const mfooterInfo = document.querySelector('.mfooter_info')
 
-mfooterArrow[0].addEventListener('click', ()=>{
-  mfooterArrow[0].classList.toggle('fa-angle-up')
-  if(mfooterInfo.style.height==='0px'){
-    mfooterInfo.style.height='171px'
-  }else{
+mfooterArrow.addEventListener('click', ()=>{
+  // if조건과 else조건의 순서가 바뀌면 한번쉬고 작동하는데 이유가뭘까?
+  mfooterArrow.classList.toggle('fa-angle-up')
+  if(mfooterInfo.style.height==='171px'){
     mfooterInfo.style.height='0'
+  }else{
+    mfooterInfo.style.height='171px'
   }
 })
 
