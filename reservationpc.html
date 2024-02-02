@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>영화 예매 인터페이스</title>
+    <link rel="stylesheet" href="./css/reservationpc.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="navigation">
+            <ul>
+                <li class="nav-item" style="background-color: rgb(255, 36, 62);">01 상영시간</li>
+                <li class="nav-item">02 인원/좌석</li>
+                <li class="nav-item">03 결제</li>
+                <li class="nav-item">04 결제완료</li>
+            </ul>
+        </nav>
+
+        <aside class="sidebar">
+            <div class="sidebar-left">
+                <ul>
+                    <li class="region" onclick="showSubRegion('seoul')">서울</li>
+                    <li class="region" onclick="showSubRegion('gyeonggi')">경기/인천</li>
+                    <li class="region" onclick="showSubRegion('Busan')">부산/경남</li>
+                    <li class="region" onclick="showSubRegion('gwanju')">전라/광주</li>
+                </ul>
+            </div>
+            <div class="sidebar-right">
+                <ul id="seoul" class="sub-region">
+                    <li>김포공항</li>
+                    <li>홍대</li>
+                    <li>신도림</li>
+                    <li>건대입구</li>
+                    <li>서울대입구</li>
+                    <li>영등포</li>
+                    <li>용산</li>
+                </ul>
+                <ul id="gyeonggi" class="sub-region" style="display: none;">
+                    <li>라페스타</li>
+                    <li>동탄</li>
+                    <li>광명</li>
+                    <li>광주터미널</li>
+                    <li>부천역</li>
+                    <li>서수원</li>
+                    <li>안성</li>
+                </ul>
+                <ul id="Busan" class="sub-region" style="display: none;">
+                    <li>센텀시티</li>
+                    <li>동래</li>
+                    <li>동부산아울렛</li>
+                    <li>부산본점</li>
+                    <li>서면</li>
+                    <li>울산</li>
+                    <li>진주혁신</li>
+                </ul>
+                <ul id="gwanju" class="sub-region" style="display: none;">
+                    <li>광주</li>
+                    <li>광주광산</li>
+                    <li>군산나운</li>
+                    <li>군산몰</li>
+                    <li>수완(아울렛)</li>
+                    <li>전주평화</li>
+                </ul>
+            </div>
+        </aside>
+
+        <div class="main-content">
+            <h1>영화 선택</h1>
+            <ul class="movie-list">
+                <li>웡카</li>
+                <li>시민덕희</li>
+                <li>소풍</li>
+                <li>도그데이즈</li>
+            </ul>
+        </div>
+
+        <div class="calendar-section">
+            <h1>날짜 선택</h1>
+            1
+            2
+            3
+            4
+        </div>
+    </div>
+    <script src="./js/reservationpc.js"></script>
+</body>
+</html>

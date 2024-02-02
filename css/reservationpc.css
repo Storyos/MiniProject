@@ -1,0 +1,291 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: '맑은 고딕', Arial, sans-serif;
+    background: #f2f2f2; /* 배경색을 조정 */
+    color: #000; /* 전체적인 텍스트 색상을 검은색으로 설정 */
+}
+
+.container {
+    display: flex;
+    width: 100vw; /* 컨테이너 너비를 화면 너비에 맞춤 */
+}
+
+
+.navigation .nav-item {
+    /* 이전 스타일 유지 */
+    background-color: rgb(255, 36, 62); /* "01 상영시간" 색상 지정 */
+}
+
+.sidebar-left {
+    flex: 1; /* 전체 너비에 비례하여 크기 조정 */
+    display: flex;
+    background: rgb(245, 245, 245); /* "서울" 지역 배경색 지정 */
+}
+
+
+.sidebar-left .sub-region {
+    background: #f1f1f1; /* 세부 지역 배경색 */
+    color: #000; /* 세부 지역 텍스트 색상 */
+    /* 나머지 스타일은 위에서 지정한 것과 동일 */
+}
+
+/* 메인 콘텐츠 및 오른쪽 사이드바의 스타일을 조정 */
+.main-content, .sidebar-right {
+    flex: 2; /* 네비게이션 및 사이드바보다 더 넓은 공간을 차지하도록 설정 */
+    /* 기존 스타일 유지 */
+}
+
+/* 나머지 스타일은 기존에 제공한 코드를 따릅니다. */
+
+
+.navigation ul {
+    list-style: none;
+    padding: 0;
+}
+
+.navigation li {
+    padding: 10px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.navigation li:hover {
+    background-color: #334257; /* 호버 효과 색상 조정 */
+}
+
+.sidebar-left, .sidebar-right {
+    width: 20%;
+    background: #2e4057; /* 사이드바 색상 조정 */
+    color: #fff;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.sidebar-left ul, .sidebar-left ul ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-left li {
+    padding: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.sidebar-left li:hover {
+    background-color: #405275; /* 호버 효과 색상 조정 */
+}
+
+.main-content {
+    flex-grow: 1;
+    background: #ecf0f1; /* 메인 콘텐츠 배경색 조정 */
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.tabs button {
+    padding: 10px;
+    margin-right: 5px;
+    border: none;
+    background-color: #7b8a8b; /* 탭 버튼 색상 조정 */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.tabs button.active, .tabs button:hover {
+    background-color: #95a5a6; /* 활성 탭 및 호버 버튼 색상 조정 */
+}
+
+.tabcontent {
+    display: none;
+    padding: 20px;
+    background: white; /* 탭 내용 배경색 조정 */
+    margin-top: 10px;
+}
+
+h1, h2, h3 {
+    color: #2c3e50; /* 제목 색상 조정 */
+}
+
+.sub-region {
+    padding-left: 10px;
+    background: #34495e; /* 세부 지역 배경색 조정 */
+}
+
+.sub-region>li{
+    margin-bottom: 30px;
+}
+
+.calendar {
+    background: white; /* 캘린더 배경색 조정 */
+    padding: 10px;
+    border: 1px solid #ccd1d1; /* 캘린더 테두리 색상 조정 */
+}
+
+.calendar-row {
+    display: flex;
+}
+
+.calendar-day, .calendar-date {
+    flex: 1;
+    padding: 5px;
+    text-align: center;
+}
+
+.calendar-day {
+    background: #7f8c8d; /* 캘린더 요일 배경색 조정 */
+    color: white;
+}
+
+.calendar-date {
+    background: #ecf0f1; /* 캘린더 날짜 배경색 조정 */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.calendar-date:hover {
+    background-color: #d0e6f1; /* 캘린더 날짜 호버 색상 조정 */
+}
+/* 기존 스타일 위에 추가합니다. */
+
+
+
+.sidebar-left .first-region {
+    width: 50%; /* 첫 번째 지역 카테고리 너비 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+}
+
+.sidebar-left .sub-region {
+    width: 50%; /* 세부 지역 카테고리 너비 */
+    background: #f1f1f1; /* 세부 지역 배경색 */
+    display: block; /* 기본적으로 표시합니다. */
+    padding: 0;
+}
+
+.sidebar-left ul {
+    list-style-type: none; /* 리스트 스타일 제거 */
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar-left li {
+    padding: 20px;
+    border-bottom: 1px solid #ddd; /* 각 리스트 아이템을 구분하기 위한 하단 테두리 */
+    cursor: pointer;
+}
+
+/* 나머지 스타일은 동일하게 유지합니다. */
+/* 이전에 제공된 스타일을 기본으로 하여 추가 스타일을 적용합니다. */
+
+.sidebar-left h1, .main-content h1 {
+    color: #2c3e50;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+/* 메인 콘텐츠 섹션의 영화 목록 스타일링 */
+.main-content ul {
+    list-style-type: none; /* 리스트 스타일 제거 */
+    padding: 0;
+}
+
+.main-content li {
+    background-color: #ecf0f1; /* 영화 목록 배경색 */
+    margin-bottom: 5px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.main-content li:hover {
+    background-color: #d0e6f1; /* 영화 목록 호버 효과 */
+}
+/* 기존에 제공된 스타일에 추가합니다. */
+
+.navigation {
+    flex: 0 0 10%; /* 네비게이션 바의 너비 고정 */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    flex: 1; /* 전체 너비에 비례하여 크기 조정 */
+    background: #2c3e50; /* 네비게이션 바 색상 */
+    color: #fff; /* 네비게이션 텍스트 색상 */
+    /* 나머지 스타일은 위에서 지정한 것과 동일 */
+}
+
+.navigation .nav-item {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2px;
+    cursor: pointer;
+    height: 25%;
+}
+
+.sidebar-left {
+    flex: 0 0 20%; /* 왼쪽 사이드바의 너비 고정 */
+    display: flex;
+    flex-direction: column; /* 세로 방향으로 내용을 정렬 */
+}
+
+.sidebar-left h1, .main-content h1 {
+    color: #2c3e50;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+/* 기존에 제공된 스타일에 추가합니다. */
+
+.sidebar {
+    flex: 0 0 20%; /* 전체 너비의 20%를 차지 */
+    display: flex;
+}
+
+.sidebar-left{
+    flex: 3;
+    padding: 10px;
+}
+
+
+.sidebar-right {
+    background:#2c3e50; /* 세부 지역 배경색 */
+}
+
+.sub-region {
+    list-style-type: none;
+    display: none; /* 기본적으로 숨김 처리 */
+}
+
+/* 나머지 스타일은 이전에 제공된 것을 그대로 사용합니다. */
+/* 이전에 제공된 스타일에 추가 및 수정합니다. */
+
+
+.sidebar {
+    flex: 0 0 20%;
+    display: flex;
+    /* 기타 스타일 */
+}
+
+.main-content {
+    flex: 1;
+    /* 기타 스타일 */
+}
+
+.movie-list {
+    list-style-type: none;
+    padding: 0;
+    /* 추가적인 스타일링 */
+}
+
+.calendar-section {
+    flex: 1;
+    /* 캘린더 섹션 스타일링 */
+}
