@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Latte Cinema Login and Signup</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .auth-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+
+        .auth-container h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .auth-container img {
+            max-width: 100%;  /* 이미지의 최대 너비를 부모 요소에 맞춤 */
+            height: auto;     /* 비율을 유지하면서 높이를 자동으로 조절 */
+            margin-bottom: 20px;
+        }
+
+        .auth-form {
+            margin-top: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #666;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .form-group button {
+            background-color: red;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .toggle-button {
+            background: none;
+            border: none;
+            color: #0072c6;
+            cursor: pointer;
+            text-decoration: underline;
+            margin-top: 10px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="auth-container">
+        
+        <br>
+        <img src="./assets/img/logo.png" alt="Latte Cinema Logo">
+        <br>
+        <br>
+
+        <div id="loginForm" class="auth-form">
+            <form>
+                <div class="form-group">
+                    <label for="loginUsername">Username:</label>
+                    <input type="text" id="loginUsername" name="loginUsername" required>
+                </div>
+                <div class="form-group">
+                    
+                    <label for="loginPassword">Password:</label>
+                    <input type="password" id="loginPassword" name="loginPassword" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Login</button>
+                </div>
+            </form>
+            <button class="toggle-button" onclick="toggleForm('signupForm')">Don't have an account? Sign up</button>
+        </div>
+
+        <div id="signupForm" class="auth-form" style="display: none;">
+            <form>
+                <div class="form-group">
+                    <label for="signupUsername">Username:</label>
+                    <input type="text" id="signupUsername" name="signupUsername" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupPassword">Password:</label>
+                    <input type="password" id="signupPassword" name="signupPassword" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Sign Up</button>
+                </div>
+            </form>
+            <button class="toggle-button" onclick="toggleForm('loginForm')">Already have an account? Login</button>
+        </div>
+    </div>
+
+    <script>
+        function toggleForm(formId) {
+            document.getElementById('loginForm').style.display = formId === 'loginForm' ? 'block' : 'none';
+            document.getElementById('signupForm').style.display = formId === 'signupForm' ? 'block' : 'none';
+        }
+    </script>
+
+</body>
+</html>
