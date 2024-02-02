@@ -34,8 +34,8 @@
                             <li><a href="#">영화</a></li>
                             <li><a href="#">영화관</a></li>
                             <li><a href="#">스토어</a></li>
-                            <li><a href="#">회원가입</a></li>
-                            <li><a href="#">로그인</a></li>
+                            <li><a href="login.html">회원가입</a></li>
+                            <li><a href="login.html">로그인</a></li>
                         </ul>
                     </nav>    
                 </div>
@@ -59,8 +59,8 @@
                     </div>
                     <div class="bm_right">
                         <ul>
-                            <li class="line"><a href="custom/faq.html">고객센터</a></li>
-                            <li class="line"><a href="#">멤버쉽</a></li>
+                            <li class="line"><a href="movie2.html">고객센터</a></li>
+                            <li class="line"><a href="movie3.html">멤버쉽</a></li>
                             <li><a href="#">VIP</a></li>
                         </ul>
                         <ul>
@@ -127,7 +127,7 @@
                                <div class="swiper-slide">
                                    <div class="poster">
                                        <figure>
-                                           <img src="assets/img/poster01.jpg" alt="시민덕회">
+                                           <img src="assets/img/poster01.jpg" alt="신세계">
                                        </figure>
                                        <div class="rank"><strong>1</strong></div>
                                        <div class="mx">
@@ -136,9 +136,9 @@
                                        </div>
                                    </div>
                                    <div class="infor">
-                                       <h3><span class="icon a19 ir_pm">15세 이상 관람가</span> <strong>시민덕회</strong></h3>
+                                       <h3><span class="icon a19 ir_pm">15세 이상 관람가</span> <strong>시민덕희</strong></h3>
                                        <div class="infor_btn">
-                                           <a href="#">상세정보</a>
+                                           <a href="movie2.html">상세정보</a>
                                            <a href="#">예매하기</a>
                                        </div>
                                    </div>
@@ -156,7 +156,7 @@
                                    <div class="infor">
                                        <h3><span class="icon a15 ir_pm">12세 이상 관람</span> <strong>외계+인 2부</strong></h3>
                                        <div class="infor_btn">
-                                           <a href="#">상세정보</a>
+                                           <a href="./movie2.html">상세정보</a>
                                            <a href="#">예매하기</a>
                                        </div>
                                    </div>
@@ -289,7 +289,7 @@
                                     <div class="infor">
                                         <h3><span class="icon all ir_pm">전체관람가</span> <strong>윙카</strong></h3>
                                         <div class="infor_btn">
-                                            <a href="#">상세정보</a>
+                                            <a href="movie2.html">상세정보</a>
                                             <a href="#">예매하기</a>
                                         </div>
                                     </div>
@@ -593,7 +593,7 @@
                                         </div>
                                     </div>
                                     <div class="infor">
-                                        <h3><span class="icon a1 ir_pm">15세 이상 관람</span> <strong>아가일</strong></h3>
+                                        <h3><span class="icon all ir_pm">15세 이상 관람</span> <strong>아가일</strong></h3>
                                         <div class="infor_btn">
                                             <a href="#">상세정보</a>
                                             <a href="#">예매하기</a>
@@ -890,6 +890,7 @@
     <script src="assets/js/iframe_api.js"></script>
     <script src="assets/js/movie.js"></script>
     <script>
+        
         //배너 이미지 슬라이드
         var swiper = new Swiper('.swiper-container',{
             pagination: {
@@ -950,6 +951,8 @@
             movCont.eq(index).css("display","block");
         });
         
+      
+
         //공지사항 탭 메뉴
         var tabMenu = $(".notice");
 
@@ -968,7 +971,8 @@
         }
 
         tabMenu.find("ul > li > a").click(tabList).focus(tabList);
-        
+
+      
     </script>
 </body>
 </html>
