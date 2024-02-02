@@ -13,7 +13,7 @@ for(let i = 0; i <8; i++){
     movie_item1.innerHTML=`          
     <div class="movie-poster">
     <!-- 여기에 영화-포스터가 들어감 -->
-    <img src="../image/movie-poster/movie_poster${i}.jpg" alt="${movie_title[i]}">
+    <img src="./image/movie-poster/movie_poster${i}.jpg" alt="${movie_title[i]}">
 
 </div>
 <div class="movie-info">
