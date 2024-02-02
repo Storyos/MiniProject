@@ -36,16 +36,5 @@ function getMovie(event) {
     `
     ${event.target.value}
     `;
-    next_btn.style.display = 'block';   
-}
-
-//다음으로 버튼을 클릭했을 때, 발생하는 이벤트
-
-
-const bar_menu = document.querySelectorAll(".navbar_menu");
-for(b of bar_menu){
-    b.addEventListener("click", (e) => {
-        console.log(b+"is Clicked");
-    })
-}
+};
 
